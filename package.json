@@ -1,0 +1,17 @@
+{
+  "name": "APIDAE",
+  "version": "1.0.0",
+  "description": "le site de l'apidae",
+  "main": "index.js",
+  "repository": "https://github.com/basile-savouret/APIDAE-web-site.git",
+  "author": "Basile Savouret <basile@smartb.city>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "api",
+    "model",
+    "web"
+  ],
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

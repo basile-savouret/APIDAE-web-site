@@ -1,0 +1,9 @@
+{
+  "name": "model",
+  "version": "1.0.0",
+  "description": "the data models",
+  "main": "",
+  "author": "Basile Savouret",
+  "license": "MIT",
+  "private": true
+}

@@ -2,6 +2,12 @@
 
 # production
 build/
+dist/
+.env
+accessKeys/
 
 # dependencies
 node_modules/
+
+# itellij
+.idea/
