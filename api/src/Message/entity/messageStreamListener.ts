@@ -9,8 +9,8 @@ const messageStreamListener = () => {
 
     const pusher = new Pusher({
         appId: '1080538',
-        key: '80f4d96a13da856420d0',
-        secret: '8967018c2bbe5e11bd30',
+        key: process.env.pusherKey as string,
+        secret: process.env.pusherKey as string,
         cluster: 'eu',
         useTLS: true
     });
