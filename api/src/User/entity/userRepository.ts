@@ -13,4 +13,4 @@ const UserSchema: Schema = new Schema({
     loginToken: {type: Schema.Types.String, required: true},
 });
 
-export default mongoose.model<UserDocument>('User', UserSchema);
+export default mongoose.model<UserDocument>('users', UserSchema);

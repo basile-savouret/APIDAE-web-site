@@ -7,8 +7,7 @@ import {userDocumentToUser} from "./entity/userEntity";
 export const createUser = async (command: CreateUserCommand): Promise<User> => {
     const loginToken = uuidv4()
     const userCreated = await userRepository.create({...command, loginToken: loginToken})
-    const user: User = userDocumentToUser(userCreated)
-    return user
+    return userDocumentToUser(userCreated)
 }
 
 export const login = async (email: string, loginToken: string): Promise<string> => {
