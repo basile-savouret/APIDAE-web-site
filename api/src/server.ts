@@ -4,17 +4,19 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import messageRoutes from "./Message/endpoint/messageEnpoint";
 import messageStreamListener from "./Message/entity/messageStreamListener";
+import cookieParser from "cookie-parser"
+import cors from 'cors'
 
 //app config
 dotenv.config()
 const app = express()
 const port = process.env.PORT || 8080
 app.use(express.json())
-// app.use((req, res, next) => {
-//     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000/")
-//     res.setHeader("Access-Control-Allow-Headers", "*")
-//     next()
-// })
+app.use(cookieParser());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+}));
 
 //mongo config
 const connectionUrl = `mongodb+srv://${process.env.mongoUserName}:${process.env.mongoUserPassword}@cluster0.pknhr.gcp.mongodb.net/${process.env.mongoDB}?retryWrites=true&w=majority`
@@ -29,7 +31,10 @@ mongoose.connection.once("open", () => {
     messageStreamListener()
 })
 
-app.get('/api', (req: Request, res: Response) => res.status(200).send('this part of the application is for the api'))
+app.get('/api', (req: Request, res: Response) =>{
+    console.log()
+    res.status(200).send('this part of the application is for the api')
+})
 
 app.use('/api/users', userRoutes);
 

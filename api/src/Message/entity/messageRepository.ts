@@ -4,6 +4,8 @@ import mongoose, {Schema, Document} from "mongoose";
 export interface MessageDocument extends CreateMessageCommand, Document {
     pinned: boolean
     room: MessageRoom
+    writerFirstname: string
+    writerLastname: string
 }
 
 const MessageSchema: Schema = new Schema({

@@ -6,11 +6,10 @@ import {messageDocumentToMessage} from "./messageEntity"
 const messageStreamListener = () => {
     const msgCollection = mongoose.connection.collection("messages")
     const changeStream = msgCollection.watch();
-
     const pusher = new Pusher({
         appId: '1080538',
         key: process.env.pusherKey as string,
-        secret: process.env.pusherKey as string,
+        secret: process.env.pusherSecret as string,
         cluster: 'eu',
         useTLS: true
     });

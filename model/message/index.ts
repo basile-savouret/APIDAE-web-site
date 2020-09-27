@@ -11,8 +11,6 @@ export interface Message {
 export type MessageRoom = "studentRoom" | "teacherRoom"
 
 export interface CreateMessageCommand {
-    writerFirstname: string
-    writerLastname: string
     message: string
     timestamp: string
 }
