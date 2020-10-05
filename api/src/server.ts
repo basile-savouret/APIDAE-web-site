@@ -26,6 +26,9 @@ mongoose.connect(connectionUrl, {
     useUnifiedTopology: true
 })
 
+mongoose.connection.on("error", (err) => {
+    console.log(err)
+})
 
 mongoose.connection.once("open", () => {
     messageStreamListener()

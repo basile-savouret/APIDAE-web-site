@@ -4,7 +4,7 @@ import {Message} from "model/Message";
 
 export const messageDocumentToMessage = (messageDocument: MessageDocument): Message => {
     return {
-        id: messageDocument.id,
+        id: messageDocument._id,
         writerFirstname: messageDocument.writerFirstname,
         writerLastname: messageDocument.writerLastname,
         message: messageDocument.message,

@@ -130,7 +130,7 @@ const App = () => {
               className={classes.listItem}
               classes={{ selected: classes.selected }}
             >
-              <ListItemText primary={item.label} classes={{ primary: "vigaFamily" }} />
+              <ListItemText primary={item.label}  primaryTypographyProps={{style:{color:"#388186", fontSize: "15px"}}} classes={{ primary: "vigaFamily" }} />
             </ListItem>
           ))
           }

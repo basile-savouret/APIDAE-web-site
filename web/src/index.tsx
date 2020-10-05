@@ -18,6 +18,16 @@ const theme = createMuiTheme({
       elevation1: {
         boxShadow: "4px 4px 6px 1px rgba(0, 0, 0, 0.05)"
       }
+    },
+    MuiTypography: {
+      body1: {
+        fontSize: "14px",
+        color: "#827D74"
+      },
+      body2: {
+        fontSize: "13px",
+        color: "rgba(130, 125, 116, 0.9)"
+      }
     }
   }
 });

@@ -14,10 +14,10 @@ const messageStreamListener = () => {
         useTLS: true
     });
 
-
     changeStream.on("change", (change) => {
         if (change.operationType === "insert") {
             const message = messageDocumentToMessage(change.fullDocument)
+            console.log(change.fullDocument)
             pusher.trigger(message.room, "inserted", {
                 id: message.id,
                 firstname: message.writerFirstname,
